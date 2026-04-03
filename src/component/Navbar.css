@@ -1,0 +1,77 @@
+.navbar {
+  transition: 0.3s;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #333;
+  margin: 0 10px;
+}
+
+.nav-link:hover {
+  color: #c4512d;
+}
+
+.search-input {
+  min-width: 180px;
+  border-radius: 6px;
+}
+
+.nav-icons {
+  gap: 15px;
+  text-decoration: dashed;
+
+}
+
+.icon-link {
+  font-size: 20px;
+  color: #333;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.icon-link:hover {
+  color: #c4512d;
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+
+  .navbar-brand img {
+    width: 70px;
+  }
+
+  .nav-link {
+    margin: 5px 0;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .nav-icons {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 577px) and (max-width: 768px) {
+  .search-input {
+    min-width: 140px;
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 992px) {
+
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .nav-icons {
+    margin-left: 10px;
+  }
+}

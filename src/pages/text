@@ -1,0 +1,59 @@
+
+<div className="container-fluid vh-100">
+  <div className="row h-100">
+
+    <!-- LEFT SIDE -->
+    <div className="col-lg-5 d-flex align-items-center left-panel">
+      <div className="form-container w-100 px-4 px-md-5">
+
+        <h5 className="logo mb-4">Fresh Farm</h5>
+
+        <h1 className="title">Start Your <br> Day Fresh</h1>
+
+        <p className="subtitle">
+          Manage your deliveries and explore fresh dairy products.
+          Customize orders, update preferences. Enjoy farm-to-door freshness.
+        </p>
+
+        <form>
+          <div className="mb-3">
+            <input type="email" className="form-control custom-input" placeholder="Enter E-mail">
+          </div>
+
+          <div className="mb-3">
+            <input type="password" className="form-control custom-input" placeholder="Enter Password">
+          </div>
+
+          <div className="d-flex justify-content-between align-items-center mb-3">
+            <div>
+              <input type="checkbox" id="remember">
+              <label for="remember">Remember me</label>
+            </div>
+            <Link to="#" className="forgot">Forgot Password?</Link>
+          </div>
+
+          <button className="btn btn-signin w-100">Login</button>
+        </form>
+
+        <p className="signup mt-4">
+          Don't have an account? <Link to="#">Sign Up</Link>
+        </p>
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div className="col-lg-7 d-none d-lg-block right-panel">
+      <img src={} alt="farm" className="img-fluid h-100 w-100 object-fit-cover">
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,17 @@
+
+.shop-header {
+  background-color: #f5f1ef;
+}
+
+@media (max-width: 427px) {
+  .shop-header h5 {
+    display: none;
+
+  }
+}
+@media (max-width: 768px) {
+  .shop-header {
+    text-align: center;
+  }
+  
+}

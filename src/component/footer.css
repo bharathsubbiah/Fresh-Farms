@@ -1,0 +1,52 @@
+.footer-logo {
+  max-width: 120px;
+}
+
+footer {
+  background-color: whitesmoke;
+  color:black;
+}
+
+footer h5 {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+footer a {
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: #dc3545; 
+  padding-left: 5px;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+footer input.form-control {
+  border-radius: 0;
+  border: none;
+  padding: 10px;
+}
+
+footer button {
+  border-radius: 0;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+footer button:hover {
+  background-color: #bb2d3b; 
+}
+
+footer hr {
+  opacity: 0.2;
+}
+
+footer .text-secondary {
+  font-size: 14px;
+}
+

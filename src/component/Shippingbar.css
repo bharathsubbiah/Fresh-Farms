@@ -1,0 +1,15 @@
+.shippingbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #043955;
+    width: 100%;
+    height: 40px;
+    align-items: center;
+}
+
+.shippingbar h4 {
+    color: white;
+    font-size: 17px;
+
+}
