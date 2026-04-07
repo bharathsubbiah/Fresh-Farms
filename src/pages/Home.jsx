@@ -112,7 +112,7 @@ const Home = () => {
 
       <div className="sharks-section">
         <h2>Approved By Sharks</h2>
-        <p className="subtitle">
+        <p className="subtext">
           Humpy Farms is proud to get partnered with two most prominent Sharks from Shark Tank.
         </p>
 
@@ -147,37 +147,36 @@ const Home = () => {
 
       {/* product card Trending This Week */}
 
+
+
       <div className="section">
         <h2>Trending This Week !</h2>
 
-        <div className="section">
-          <h2>Top Sellers</h2>
-
-          <div className="products">
-            {HomePageProduct.map((product) => (
-              <div className="card" key={product.id}>
-                <div className="image-box">
-                  <img src={product.image} alt={product.name} />
-                </div>
-
-                <h3>{product.name}</h3>
-
-                <div className="price">
-                  ₹ {product.price} <del>₹ {product.oldPrice}</del>
-                </div>
-
-                <select>
-                  {product.options.map((option, index) => (
-                    <option key={index}>{option}</option>
-                  ))}
-                </select>
-
-                <button>Add to Cart</button>
+        <div className="products">
+          {HomePageProduct.map((product) => (
+            <div className="card" key={product.id}>
+              <div className="image-box">
+                <img src={product.image} alt={product.name} />
               </div>
-            ))}
-          </div>
+
+              <h3>{product.name}</h3>
+
+              <div className="price">
+                ₹ {product.price} <del>₹ {product.oldPrice}</del>
+              </div>
+
+              <select>
+                {product.options.map((option, index) => (
+                  <option key={index}>{option}</option>
+                ))}
+              </select>
+
+              <button>Add to Cart</button>
+            </div>
+          ))}
         </div>
       </div>
+
 
       {/* ad image */}
 

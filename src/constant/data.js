@@ -32,7 +32,7 @@ export const HomePageProduct = [
         image: productcheese,
         price: 200,
         oldPrice: 250,
-        options: ["250 gm", "500 gm"]
+        options: ["250 G", "500 G"]
     },
     {
         id: 3,
@@ -40,7 +40,7 @@ export const HomePageProduct = [
         image: productdals,
         price: 299,
         oldPrice: 199,
-        options: ["250 g", "500 g"]
+        options: ["250 G", "500 G"]
     },
     {
         id: 4,
@@ -76,7 +76,7 @@ export const ShopPageProduct = [
         image: productcheese,
         price: 200,
         oldPrice: 250,
-        options: ["250 gm", "500 gm"]
+        options: ["250 G", "500 G"]
     },
     {
         id: 8,
@@ -84,7 +84,7 @@ export const ShopPageProduct = [
         image: productdals,
         price: 299,
         oldPrice: 199,
-        options: ["250 g", "500 g"]
+        options: ["250 G", "500 G"]
     },
     {
         id: 9,
