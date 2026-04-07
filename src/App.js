@@ -24,21 +24,12 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
-
           <Route path='/cart' element={<Cart />} />
 
 
         </Routes>
 
       </BrowserRouter>
-      {/* <Navbar/> */}
-      {/* <Shippingbar/> */}
-      {/* <Homepage/> */}
-      {/* <About/> */}
-      {/* <Shop/> */}
-      {/* <Contact/>       */}
-      {/* <Bottom/> */}
-      {/* <Footer/> */}
     </div>
   );
 }

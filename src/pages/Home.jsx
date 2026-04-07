@@ -6,17 +6,6 @@ import gheeimage from "../images/ghee circle.png"
 import breadimage from "../images/bread circle.png"
 import oilimage from "../images/oil circle.png"
 import seedsimage from "../images/seeds circle.png"
-import productghee from "../images/product images/Ghees.jpg"
-import productcheese from "../images/product images/Cheese.jpg"
-import productdals from "../images/product images/Dals.jpg"
-import productmilkpouch from "../images/product images/Milk pouch.jpg"
-import productmilk from "../images/product images/Milk.jpg"
-import productoil from "../images/product images/Oil.jpg"
-import productbuffalomilk from "../images/product images/buffalo milk.jpg"
-import productjaggery from "../images/product images/jaggery.jpg"
-import productpanner from "../images/product images/paneer.jpg"
-import productpoha from "../images/product images/poha.jpg"
-import productsalt from "../images/product images/salt.jpg"
 import shraks1 from "../images/Peyush Bansal.avif"
 import shraks2 from "../images/Ghazal Alagh.avif"
 import adimage from "../images/ad image.png"
@@ -29,13 +18,14 @@ import app3 from "../images/app 3.avif"
 import Navbar from '../component/Navbar'
 import Shippingbar from '../component/Shippingbar'
 import Footer from '../component/Footer'
+import { HomePageProduct } from '../constant/data'
 
 const Home = () => {
   return (
     <>
-    <Navbar/>
-    <Shippingbar/>
-      
+      <Navbar />
+      <Shippingbar />
+
       {/* slider */}
       <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
@@ -89,77 +79,32 @@ const Home = () => {
         </div>
       </div>
 
-      {/* product card 1*/}
+      {/* product card Top Sellers */}
       <div className="section">
         <h2>Top Sellers</h2>
 
         <div className="products">
+          {HomePageProduct.map((product) => (
+            <div className="card" key={product.id}>
+              <div className="image-box">
+                <img src={product.image} alt={product.name} />
+              </div>
 
-          <div className="card">
-            <div className="image-box">
-              <img src={productghee} alt="ghee" />
+              <h3>{product.name}</h3>
+
+              <div className="price">
+                ₹ {product.price} <del>₹ {product.oldPrice}</del>
+              </div>
+
+              <select>
+                {product.options.map((option) => (
+                  <option key={option}>{option}</option>
+                ))}
+              </select>
+
+              <button>Add to Cart</button>
             </div>
-            <h3>Desi Cow's Ghee</h3>
-            <div className="price">₹ 799 <del>₹ 650.00</del></div>
-            <select>
-              <option>250 ML</option>
-              <option>500 ML</option>
-            </select>
-            <button>Add to Cart</button>
-          </div>
-
-          <div className="card">
-            <div className="image-box">
-              <img src={productcheese} alt="cheese" />
-            </div>
-            <h3>Cheese</h3>
-            <div className="price">₹ 200.00<del>₹ 250.00</del> </div>
-            <select>
-              <option>250 gm</option>
-              <option>500 gm</option>
-            </select>
-            <button>Add to Cart</button>
-          </div>
-
-          <div className="card">
-            <div className="image-box">
-              <img src={productdals} alt="dals" />
-            </div>
-            <h3>Dals</h3>
-            <div className="price">₹ 299 <del>₹ 199.00</del></div>
-            <select>
-              <option>250 g</option>
-              <option>500 g</option>
-            </select>
-            <button>Add to Cart</button>
-          </div>
-
-          <div className="card">
-            <div className="image-box">
-              <img src={productmilk} alt="milk" />
-            </div>
-            <h3>Cow's Milk</h3>
-            <div className="price">₹ 30 <del>₹ 25.00</del></div>
-            <select>
-              <option>250 ML</option>
-              <option>500 ML</option>
-            </select>
-            <button>Add to Cart</button>
-          </div>
-
-          <div className="card">
-            <div className="image-box">
-              <img src={productmilkpouch} alt="milkpouch" />
-            </div>
-            <h3>Cow Milk Pouch</h3>
-            <div className="price">₹ 30 <del>₹ 25.00</del></div>
-            <select>
-              <option>250 ML</option>
-              <option>500 ML</option>
-            </select>
-            <button>Add to Cart</button>
-          </div>
-
+          ))}
         </div>
       </div>
 
@@ -200,78 +145,37 @@ const Home = () => {
         </div>
       </div>
 
-      {/* product card 2 */}
+      {/* product card Trending This Week */}
 
       <div className="section">
         <h2>Trending This Week !</h2>
 
-        <div className="products">
+        <div className="section">
+          <h2>Top Sellers</h2>
 
-          <div className="card">
-            <div className="image-box">
-              <img src={productghee} alt="ghee" />
-            </div>
-            <h3>Desi Cow's Ghee</h3>
-            <div className="price">₹ 650.00 <del>₹ 700.00</del></div>
-            <select>
-              <option>250 ML</option>
-              <option>500 ML</option>
-            </select>
-            <button>Add to Cart</button>
+          <div className="products">
+            {HomePageProduct.map((product) => (
+              <div className="card" key={product.id}>
+                <div className="image-box">
+                  <img src={product.image} alt={product.name} />
+                </div>
+
+                <h3>{product.name}</h3>
+
+                <div className="price">
+                  ₹ {product.price} <del>₹ {product.oldPrice}</del>
+                </div>
+
+                <select>
+                  {product.options.map((option, index) => (
+                    <option key={index}>{option}</option>
+                  ))}
+                </select>
+
+                <button>Add to Cart</button>
+              </div>
+            ))}
           </div>
-
-          <div className="card">
-            <div className="image-box">
-              <img src={productcheese} alt="cheese" />
-            </div>
-            <h3>Cheese</h3>
-            <div className="price">₹ 200.00<del>₹ 250.00</del> </div>
-            <select>
-              <option>250 gm</option>
-              <option>500 gm</option>
-            </select>
-            <button>Add to Cart</button>
-          </div>
-
-          <div className="card">
-            <div className="image-box">
-              <img src={productdals} alt="dals" />
-            </div>
-            <h3>Dals</h3>
-            <div className="price">₹ 199.00 <del>₹ 299.00</del></div>
-            <select>
-              <option>250 g</option>
-              <option>500 g</option>
-            </select>
-            <button>Add to Cart</button>
-          </div>
-
-          <div className="card">
-            <div className="image-box">
-              <img src={productmilk} alt="milk" />
-            </div>
-            <h3>Cow's Milk</h3>
-            <div className="price">₹ 25.00 <del>₹ 30.00</del></div>
-            <select>
-              <option>250 ML</option>
-              <option>500 ML</option>
-            </select>
-            <button>Add to Cart</button>
-          </div>
-
-          <div className="card">
-            <div className="image-box">
-              <img src={productmilkpouch} alt="milkpouch" />
-            </div>
-            <h3>Cow Milk Pouch</h3>
-            <div className="price">₹ 25.00 <del>₹ 30.00</del></div>
-            <select>
-              <option>250 ML</option>
-              <option>500 ML</option>
-            </select>
-            <button>Add to Cart</button>
-          </div>
-
         </div>
       </div>
 
@@ -386,7 +290,7 @@ const Home = () => {
         </div>
       </div>
 
-<Footer/>
+      <Footer />
 
     </>
 

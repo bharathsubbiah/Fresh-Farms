@@ -3,23 +3,13 @@ import './Shop.css'
 import Navbar from '../component/Navbar';
 import Shippingbar from '../component/Shippingbar';
 import Footer from '../component/Footer';
-import productghee from "../images/product images/Ghees.jpg"
-import productcheese from "../images/product images/Cheese.jpg"
-import productdals from "../images/product images/Dals.jpg"
-import productmilkpouch from "../images/product images/Milk pouch.jpg"
-import productmilk from "../images/product images/Milk.jpg"
-import productoil from "../images/product images/Oil.jpg"
-import productbuffalomilk from "../images/product images/buffalo milk.jpg"
-import productjaggery from "../images/product images/jaggery.jpg"
-import productpanner from "../images/product images/paneer.jpg"
-import productpoha from "../images/product images/poha.jpg"
-import productsalt from "../images/product images/salt.jpg"
+import { ShopPageProduct } from '../constant/data';
 
 const Shop = () => {
     return (
         <>
-        <Navbar/>
-        <Shippingbar/>
+            <Navbar />
+            <Shippingbar />
             {/* <Navbar/> */}
             <div>
 
@@ -94,147 +84,36 @@ const Shop = () => {
                 </div>
 
                 {/* Product Grid */}
-                <div className='section'>
 
+                <div className="section">
                     <div className="products">
+                        {ShopPageProduct.map((product) => (
+                            <div className="card" key={product.id}>
+                                <div className="image-box">
+                                    <img src={product.image} alt={product.name} />
+                                </div>
 
-                        <div className="card">
-                            <div className="image-box">
-                                <img src={productghee} alt="ghee" />
+                                <h3>{product.name}</h3>
+
+                                <div className="price">
+                                    ₹ {product.price}.00 <del>₹ {product.oldPrice}.00</del>
+                                </div>
+
+                                <select>
+                                    {product.options.map((option) => (
+                                        <option key={option}>{option}</option>
+                                    ))}
+                                </select>
+
+                                <button>Add to Cart</button>
                             </div>
-                            <h3>Desi Cow's Ghee</h3>
-                            <div className="price">₹ 650.00 <del>₹ 700.00</del></div>
-                            <select>
-                                <option>250 ML</option>
-                                <option>500 ML</option>
-                            </select>
-                            <button>Add to Cart</button>
-                        </div>
-
-                        <div className="card">
-                            <div className="image-box">
-                                <img src={productbuffalomilk} alt="bufallo milk" />
-                            </div>
-                            <h3>Buffalo Milk</h3>
-                            <div className="price">₹ 40.00 <del>₹ 50.00</del></div>
-                            <select>
-                                <option>250 ML</option>
-                                <option>500 ML</option>
-                            </select>
-                            <button>Add to Cart</button>
-                        </div>
-
-                        <div className="card">
-                            <div className="image-box">
-                                <img src={productdals} alt="dals" />
-                            </div>
-                            <h3>Dals</h3>
-                            <div className="price">₹ 199.00 <del>₹ 299.00</del></div>
-                            <select>
-                                <option>250 g</option>
-                                <option>500 g</option>
-                            </select>
-                            <button>Add to Cart</button>
-                        </div>
-
-                        <div className="card">
-                            <div className="image-box">
-                                <img src={productmilk} alt="milk" />
-                            </div>
-                            <h3>Cow's Milk</h3>
-                            <div className="price">₹ 25.00 <del>₹ 30.00</del></div>
-                            <select>
-                                <option>250 ML</option>
-                                <option>500 ML</option>
-                            </select>
-                            <button>Add to Cart</button>
-                        </div>
-
-                        <div className="card">
-                            <div className="image-box">
-                                <img src={productmilkpouch} alt="milkpouch" />
-                            </div>
-                            <h3>Cow Milk Pouch</h3>
-                            <div className="price">₹ 25.00 <del>₹ 30.00</del></div>
-                            <select>
-                                <option>250 ML</option>
-                                <option>500 ML</option>
-                            </select>
-                            <button>Add to Cart</button>
-                        </div>
-
-                        <div className="card">
-                            <div className="image-box">
-                                <img src={productoil} alt="ghee" />
-                            </div>
-                            <h3>Oil Glass Bottle</h3>
-                            <div className="price">₹ 650.00 <del>₹ 799.00</del></div>
-                            <select>
-                                <option>250 ML</option>
-                                <option>500 ML</option>
-                            </select>
-                            <button>Add to Cart</button>
-                        </div>
-
-                        <div className="card">
-                            <div className="image-box">
-                                <img src={productjaggery} alt="jaggery" />
-                            </div>
-                            <h3>Jaggery Powder</h3>
-                            <div className="price">₹ 199.00 <del>₹ 299.00</del></div>
-                            <select>
-                                <option>250 gm</option>
-                                <option>500 gm</option>
-                            </select>
-                            <button>Add to Cart</button>
-                        </div>
-
-                        <div className="card">
-                            <div className="image-box">
-                                <img src={productpoha} alt="poha" />
-                            </div>
-                            <h3>Poha Breakfast</h3>
-                            <div className="price">₹ 150.00 <del>₹ 250.00</del></div>
-                            <select>
-                                <option>250 gm</option>
-                                <option>500 gm</option>
-                            </select>
-                            <button>Add to Cart</button>
-                        </div>
-
-                        <div className="card">
-                            <div className="image-box">
-                                <img src={productpanner} alt="paneer" />
-                            </div>
-                            <h3>Paneer</h3>
-                            <div className="price">₹ 200.00 <del>₹ 250.00</del></div>
-                            <select>
-                                <option>250 gm</option>
-                                <option>500 gm</option>
-                            </select>
-                            <button>Add to Cart</button>
-                        </div>
-
-
-                        <div className="card">
-                            <div className="image-box">
-                                <img src={productcheese} alt="cheese" />
-                            </div>
-                            <h3>Cheese</h3>
-                            <div className="price">₹ 200.00<del>₹ 250.00</del> </div>
-                            <select>
-                                <option>250 gm</option>
-                                <option>500 gm</option>
-                            </select>
-                            <button>Add to Cart</button>
-                        </div>
-
+                        ))}
                     </div>
                 </div>
 
             </div>
 
-            <Footer/>
+            <Footer />
 
         </>
     );
